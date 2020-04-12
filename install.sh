@@ -28,7 +28,7 @@ echo "Symlinking rsyslog & systemd configurations into /etc"
 ln -s $PWD/nebula.service /etc/systemd/system/
 ln -s $PWD/nebula-syslog.conf /etc/rsyslog.d/10-nebula.conf
 echo Restarting syslog
-systemctl syslog restart
+systemctl restart syslog 
 echo Enabling nebula
 systemctl enable nebula
 
